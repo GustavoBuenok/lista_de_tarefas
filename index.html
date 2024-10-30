@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <h1>Lista de Tarefas</h1>
+  <button onclick="abrirModal()">Incluir Tarefa</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome da Tarefa</th>
+        <th>Custo (R$)</th>
+        <th>Data Limite</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="listaTarefas">
+      <!-- As tarefas serão listadas aqui pelo JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- Modal para adicionar nova tarefa -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Adicionar Tarefa</h3>
+      <input type="text" id="nome" placeholder="Nome da Tarefa" required>
+      <input type="number" id="custo" placeholder="Custo (R$)" required>
+      <input type="date" id="dataLimite" placeholder="Data Limite" required>
+      <button onclick="adicionarTarefa()">Salvar Tarefa</button>
+      <button onclick="fecharModal()">Cancelar</button>
+    </div>
+  </div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
