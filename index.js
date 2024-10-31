@@ -1,4 +1,3 @@
-
 // Função para abrir o modal
 function abrirModal() {
   document.getElementById("modal").style.display = "block";
@@ -37,8 +36,12 @@ function adicionarTarefa() {
     <td>R$${custo.toFixed(2)}</td>
     <td>${dataLimite}</td>
     <td class="actions">
-      <button onclick="editarTarefa(this)">Editar</button>
-      <button onclick="excluirTarefa(this)">Excluir</button>
+      <button class="btn-icon" onclick="editarTarefa(this)">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button class="btn-icon" onclick="excluirTarefa(this)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
     </td>
   `;
 
@@ -74,3 +77,4 @@ function excluirTarefa(botao) {
     linha.remove();
   }
 }
+

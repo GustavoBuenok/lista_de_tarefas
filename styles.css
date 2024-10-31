@@ -1,5 +1,38 @@
+body {
+  background-image: url('pexels-divinetechygirl-1181396.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+}
 
-/* Estilos da Tabela */
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.titulo{
+  text-align: center;
+}
+
+.abrir_modal{
+  border-radius: 5px;
+  background-color: #734b37;
+  color: white;
+  border-color: black;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.abrir_modal:hover {
+  color: white; /* Cor do texto no hover */
+  transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+
+
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -8,14 +41,24 @@ table {
 th, td {
   padding: 10px;
   text-align: left;
-  border: 1px solid #ddd;
+  border: 1px solid #734b37;
 }
 th {
-  background-color: #f2f2f2;
+  background-color: #a68869;
 }
-.high-cost {
-  background-color: yellow;
+
+/* Estilo padrão para as linhas da tabela */
+#listaTarefas tr {
+  background-color: #ccbeae; /* Cor padrão das linhas */
 }
+
+/* Estilo para tarefas com custo >= 1000 */
+#listaTarefas tr.high-cost {
+  background-color: yellow !important; /* Força o amarelo para custo alto */
+}
+ 
+
+
 .actions {
   display: flex;
   gap: 5px;
@@ -36,7 +79,7 @@ th {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-content {
-  background-color: #fff;
+  background-color: #ccbeae;
   margin: 15% auto;
   padding: 20px;
   width: 300px;
@@ -53,4 +96,17 @@ th {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  margin-right: 5px;
+}
+
+.btn-icon:hover {
+  color: #007bff;
 }
